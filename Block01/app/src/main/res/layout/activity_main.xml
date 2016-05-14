@@ -19,8 +19,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:background="#AED2FF"
-        android:onClick="toDo" />
+        android:background="#AED2FF" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,6 +30,5 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:background="#FD9BF3"
-        android:onClick="toDo" />
+        android:background="#FD9BF3" />
 </RelativeLayout>
