@@ -1,9 +1,11 @@
 package com.example.masa.block01;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -17,7 +19,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         buttonBlue = (Button) findViewById(R.id.button_blueInvisible);
         buttonBlue.setOnClickListener(this);
-        buttonPink = (Button) findViewById(R.id.button_pinkPanther);
+        buttonPink = new Button(getApplicationContext());
+        buttonPink.setTextColor(Color.BLACK);
+        buttonPink.setBackgroundColor(Color.parseColor(("#FD9BF3")));
+        buttonPink.setText("The Pink Panther's To Do List");
+        RelativeLayout rl_mainScreen = (RelativeLayout) findViewById(R.id.relativeLayout_mainScreen);
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.MATCH_PARENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT);
+        params.addRule(RelativeLayout.BELOW, buttonBlue.getId());
+        rl_mainScreen.addView(buttonPink, params);
         buttonPink.setOnClickListener(this);
     }
 
